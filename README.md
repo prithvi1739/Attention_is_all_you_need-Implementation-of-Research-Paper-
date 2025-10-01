@@ -1,7 +1,12 @@
-# Attention_is_all_you_need-Implementation-of-Research-Paper-
+# Attention_is_all_you_need-Implementation-of-Research-Paper
 This repo is my clean, from-scratch implementation of the Transformer architecture introduced in Attention Is All You Need (Vaswani et al., 2017). The core idea is simple: stop forcing the model to read tokens one after another with a recurrent loop. Instead, let it look at everything at once and decide what matters using attention.
 
-Why attention matters
+## Transformer Architechture:
+
+<img width="727" height="1024" alt="Transformer" src="https://github.com/user-attachments/assets/e659e41d-92d3-42be-a168-818ae20203de" />
+
+
+## Why attention matters:
 
 Here’s the thing: in language, the useful signal for a token might sit one step away or fifty. RNNs and LSTMs have to carry that signal through a long chain, which leads to vanishing gradients, memory bottlenecks, and slow training. Self-attention skips the line:
 
@@ -27,7 +32,7 @@ Here’s the thing: in language, the useful signal for a token might sit one ste
 
 What this really means is you get orders-of-magnitude faster training and the freedom to scale width and depth without waiting for a for-loop over timesteps.
 
-#What’s in this repo:
+## What’s in this repo:
 
 1. Minimal, readable PyTorch modules for:
 
@@ -41,11 +46,12 @@ What this really means is you get orders-of-magnitude faster training and the fr
 
 6. Encoder/Decoder stacks with masked attention for autoregressive decoding.
 
-#Roadmap
+
+## Roadmap:
 
 This is just the beginning. I’ll be implementing more research papers across ML and Generative AI—variants of attention, modern pretraining tricks, and domain-specific adaptations. Expect a steady stream of clear, production-ready reproductions with strong baselines and concise notes.
 
-Reference
+## Reference:
 
 Vaswani et al., 2017. Attention Is All You Need. NIPS.
 
